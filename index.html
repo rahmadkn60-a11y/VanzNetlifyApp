@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>VANZ • Lua Converter</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="grid"></div><div class="glow g1"></div><div class="glow g2"></div>
+<main>
+  <header>
+    <div class="brand"><div class="v">V</div><div><b>VANZ</b><small>LUA CONVERTER</small></div></div>
+    <a href="/.netlify/functions/auth-start" class="github">CONNECT GITHUB</a>
+  </header>
+
+  <section class="hero">
+    <p>GITHUB AUTOMATION</p>
+    <h1>Lua → Raw → Loadstring</h1>
+    <span>Paste your Lua/Luau source, hit Conversion, and the configured GitHub repository will receive the file.</span>
+  </section>
+
+  <section class="card">
+    <div class="head"><div><h2>Source Code</h2><small>Paste Lua / Luau here</small></div><em id="count">0 chars</em></div>
+    <textarea id="source" spellcheck="false" placeholder="-- Paste your Lua / Luau code here..."></textarea>
+    <button id="convert"><i></i><span>CONVERSION</span><b>→</b></button>
+  </section>
+
+  <section class="card result" id="result" hidden>
+    <div class="head"><div><p>RESULT</p><h2>Generated Loadstring</h2></div><button id="copy">COPY</button></div>
+    <pre id="output"></pre>
+    <a id="raw" target="_blank" rel="noopener"></a>
+  </section>
+
+  <footer>VANZ • PRIVATE GITHUB UPLOADER • NETLIFY FUNCTIONS</footer>
+</main>
+<div id="toast"></div>
+<script src="/app.js"></script>
+</body>
+</html>
